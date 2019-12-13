@@ -6,9 +6,9 @@ Because of the data limit in github, I upload the full spectral flux and element
 
 ## Environment Requirements
 
--keras
--tensorflow
--dust_extinction
+-keras  
+-tensorflow  
+-dust_extinction  
 
 
 ## The Code Structure
