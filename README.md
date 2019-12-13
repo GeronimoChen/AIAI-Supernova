@@ -44,6 +44,12 @@ In the "IGmodel/", the base element abundances are given in "Element.dat", the e
 All the spectral simulations use a same density structure (but the real density in the simulation is still changing, because not allowing the element abundances sum to one is effectively changing that), and it is "IGmodel/Density.dat".  
 "DD-Sprinter-Lumi8.67.yml" is a example of my configurations of running TARDIS simulation.  
 
+In the "DataProduct/", the yaml file, the element abundance, the TARDIS calculted temperature and the TARDIS calculated spectra for 11 of 2000-10000 Angstrom SNe spectra and 15 of 3000-5200 Angstrom SNe spectra are given, the relating observational spectra are available in the "ObserveSpectra/" directory.  
+
+## Supplementary Pictures for the Paper
+
+In the "DataProduct/PaperPlots/". Apart from the pictures shown on the paper, it also contains the simulated spectra from the "predict median" element; the nickle element abundance versus stretch fitting using emcee; nickle's one-sigma variation on simulated spectra, etc.  
+
 ## To-Do Lists
 
 I have not formalized the code for the 3000-5200 Angstrom wavelength spectra, and the code for absolute luminosity predictions. 
