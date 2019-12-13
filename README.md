@@ -8,6 +8,7 @@ Because of the data limit in github, I upload the full spectral flux and element
 
 -keras  
 -tardis  
+-astropy  
 -tensorflow  
 -dust_extinction 0.7+ (https://dust-extinction.readthedocs.io/en/latest/index.html)  
 
@@ -32,13 +33,14 @@ But still, you need to try several times to determine the best photosphere and r
 "PredictorOneElem.py" is for running neural networks to predict the element abundances from input spectra, and the same as "PredictorOneElemReallyRunner.py". 
 They can be used by "ExecutePredicy.ipynb", I isolate these two scripts out mainly due to the time of reading a neural network into memory.  
 
-
 ## Data Structure
 
 In the "DataSet/", a small portion of the data are given ("X_small.npy", "Y_small.npy"). 
 "X_small.npy" contains 1234 spectra, each spectra contains 2000 pixels. 
 "Y_small.csv" contains the relating element abundances which used to simulate the 1234 spectra, its column names are the element number and the zone number, each zones match different speed regions of supernova ejecta. 
 "wave.npy" contains the wavelength of 2000 pixels of the spectral flux in "X_small.npy".  
+
+In the "DataCache/2019.3.3/", I stored the testing dataset for the neural networks in "MdSaver/HunKRun/". When you are using the "HunKRun" neural networks (which are the best networks trained on about 90000 spectra), please use the pre-trained testing dataset "Xtest.npy" and "Ytest.csv" and don't extract individual testing set from the whole-data.  
 
 In the "IGmodel/", the base element abundances are given in "Element.dat", the element abundances for spectral simulations are the base element abundaces multiply by the "multiplication factor" stored in "DataSet/Y_small.csv". 
 All the spectral simulations use a same density structure (but the real density in the simulation is still changing, because not allowing the element abundances sum to one is effectively changing that), and it is "IGmodel/Density.dat".  
