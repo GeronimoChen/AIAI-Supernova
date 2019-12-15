@@ -1,0 +1,60 @@
+atom_data: /home/hulei/Geronimo/DLSY_Spectra/ElementBase/kurucz_cd23_chianti_H_He.h5
+model:
+  abundances:
+    filename: Element.dat
+    filetype: simple_ascii
+    type: file
+  structure:
+    filename: Density.dat
+    filetype: simple_ascii
+    type: file
+#    type: specific
+#    velosity:
+#      start: 11000 km/s
+#      stop:  20000 km/s
+#      num:   30
+#    density:
+#      type: power_law
+#      time_0: 0.000231481 day
+#      rho_0: 3e+29 g/cm3
+#      v_0: 1 km/s
+#      exponent: -7
+    v_inner_boundary: 7100.000 km/s
+    v_outer_boundary: 24627.9 km/s
+montecarlo:
+#  black_body_sampling:
+#    num: 1000000
+#    start: 1 angstrom
+#    stop: 1000000 angstrom
+  iterations: 15
+  last_no_of_packets: 4.5e+5
+  no_of_packets: 2.0e+5
+  no_of_virtual_packets: 2
+  nthreads: 48
+  seed: 6543209
+  convergence_strategy:
+    type: damped
+    damping_constant: 1.0
+    threshold: 0.05
+    fraction: 0.8
+    hold_iterations: 3
+    t_inner:
+      damping_constant: 1.0
+plasma:
+#  initial_t_rad: 10000 K
+#  initial_t_inner: 10000 K
+  disable_electron_scattering: false
+  excitation: dilute-lte
+  ionization: nebular
+  line_interaction_type: macroatom
+  radiative_rates_type: detailed
+spectrum:
+  num: 2000
+  start: 2000 angstrom
+  stop: 10000 angstrom
+supernova:
+  luminosity_requested: 8.52 log_lsun
+  time_explosion: 19. day
+  luminosity_wavelength_start: 6500 angstrom
+  luminosity_wavelength_end: 7500 angstrom
+tardis_config_version: v1.0
