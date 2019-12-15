@@ -33,6 +33,9 @@ But still, you need to try several times to determine the best photosphere and r
 "PredictorOneElem.py" is for running neural networks to predict the element abundances from input spectra, and the same as "PredictorOneElemReallyRunner.py". 
 They can be used by "ExecutePredicy.ipynb", I isolate these two scripts out mainly due to the time of reading a neural network into memory.  
 
+All the notebooks and directories with "HST" as beginning are for the spectra of 3000-5200 Angstrom wavelength.  
+
+
 ## Data Structure
 
 In the "DataSet/", a small portion of the data are given ("X_small.npy", "Y_small.npy"). 
@@ -54,7 +57,7 @@ In the "DataProduct/PaperPlots/". Apart from the pictures shown on the paper, it
 
 ## To-Do Lists
 
-I have not formalized the code for the 3000-5200 Angstrom wavelength spectra, and the code for absolute luminosity predictions. 
+I have not formalized the code for absolute luminosity predictions. 
 Also, I didn't upload the template comparison code to estimate the galactic extinction effect yet. 
 Maybe, I can launch a kaggle competition for it? 
 Because I am not so sure my neural network structure is the finest-tuned, any weird network structures are welcomed. 
